@@ -69,7 +69,7 @@ All datasets used in this project are from Kaggle’s [Brazilian E-Commerce Publ
 
 2. Connect SQL Server with:
 ```python
-engine = create_engine("mssql+pyodbc://NARENDRA\\SQLEXPRESS/sql_to_python?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes")
+engine = create_engine("mssql+pyodbc://NARENDRA\\SQLEXPRESS/sql_to_python?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes")```
 
 
 ## ✅ Output
