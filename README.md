@@ -68,8 +68,14 @@ All datasets used in this project are from Kaggle’s [Brazilian E-Commerce Publ
    `pip install pandas sqlalchemy pyodbc matplotlib seaborn`
 
 2. Connect SQL Server with:
+
 ```python
-engine = create_engine("mssql+pyodbc://NARENDRA\\SQLEXPRESS/sql_to_python?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes")```
+from sqlalchemy import create_engine
+
+engine = create_engine(
+    "mssql+pyodbc://NARENDRA\\SQLEXPRESS/sql_to_python?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes"
+)
+
 
 
 ## ✅ Output
