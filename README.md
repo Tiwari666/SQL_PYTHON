@@ -78,14 +78,11 @@ engine = create_engine(
 
 
 
-## ✅ Output
+## Output
 Transformed data is saved to:
-
 A SQL Server table: combined_data
-
 Or exported to CSV via df.to_csv()
 
-# ✅ Author
+## Author
 Narendra Tiwari
-
 Built for academic + practical learning
