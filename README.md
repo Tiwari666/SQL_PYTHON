@@ -63,13 +63,6 @@ All datasets used in this project are from Kaggle’s [Brazilian E-Commerce Publ
 ---
 
 ## ✅ Setup
-
-1. Install dependencies:  
-   `pip install pandas sqlalchemy pyodbc matplotlib seaborn`
-
-2. Connect SQL Server with:
-
-```python
 from sqlalchemy import create_engine
 
 engine = create_engine(
@@ -77,12 +70,13 @@ engine = create_engine(
 )
 
 
+## Output  
+Transformed data is saved to:  
+- A SQL Server table: `combined_data`  
+- Or exported to CSV via `df.to_csv()`  
 
-## Output
-Transformed data is saved to:
-A SQL Server table: combined_data
-Or exported to CSV via df.to_csv()
 
-## Author
-Narendra Tiwari
-Built for academic + practical learning
+## Author  
+**Narendra Tiwari**  
+Built for academic + practical learning.
+
