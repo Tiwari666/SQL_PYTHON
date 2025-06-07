@@ -70,13 +70,14 @@ engine = create_engine(
 )
 
 
-## Output  
-Transformed data is saved to:  
-- A SQL Server table: `combined_data`  
-- Or exported to CSV via `df.to_csv()`  
+##  Output
 
+✅ Transformed data is saved to:
+- SQL Server table: `combined_data_fast`
+- Optionally exported: `combined_data_fast.csv`
 
-## Author  
-**Narendra Tiwari**  
-Built for academic + practical learning.
+##  Author
+Narendra Tiwari  
+Built for academic + practical learning using real-world Kaggle data
+
 
