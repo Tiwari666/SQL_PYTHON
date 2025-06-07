@@ -1,0 +1,75 @@
+🟩 Basic SQL Analysis Tasks:
+
+|  # | Query Description                                                               |
+| -: | ------------------------------------------------------------------------------- |
+|  1 | Retrieve a list of all **distinct cities** where customers reside.              |
+|  2 | Count how many **orders were placed in the year 2017**.                         |
+|  3 | Calculate the **total sales amount grouped by product category**.               |
+|  4 | Determine the **percentage of orders paid in installments** (vs. full payment). |
+|  5 | Count how many **customers are from each state**.                               |
+
+
+🟨 Intermediate SQL Analysis Tasks:
+
+|  # | Query Description                                                                         |
+| -: | ----------------------------------------------------------------------------------------- |
+|  1 | Count the **number of orders per month** during the year 2018.                            |
+|  2 | Compute the **average number of products per order**, grouped by `customer_city`.         |
+|  3 | Calculate the **contribution percentage** of each product category to total revenue.      |
+|  4 | Assess the **correlation between product price** and how often the product was purchased. |
+|  5 | Compute **total revenue per seller**, and **rank sellers** by highest to lowest revenue.  |
+
+
+🟥 Advanced SQL Analysis Tasks:
+
+|  # | Query Description                                                                               |
+| -: | ----------------------------------------------------------------------------------------------- |
+|  1 | For each customer, calculate the **moving average of their order values** across their history. |
+|  2 | Compute **cumulative monthly sales totals** for every year in the dataset.                      |
+|  3 | Calculate the **year-over-year (YoY) growth rate** of total sales.                              |
+|  4 | Measure **customer retention rate** — percent of customers who purchase again within 6 months.  |
+|  5 | Identify the **top 3 highest-spending customers per year**.                                     |
+
+
+🟩 Beginner SQL Tools – Real Questions + When to Use
+
+| # | **Tool**             | **Question**                                         | **When to Use**                                                              |
+| - | -------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 1 | `SELECT`, `FROM`     | Show all customer records.                           | Use when you want to display all rows and columns from a table.              |
+| 2 | `DISTINCT`           | List all unique cities where customers are located.  | Use when you want only **unique values** from a column like `customer_city`. |
+| 3 | `WHERE`              | Show all customers from state `'SP'`.                | Use when filtering rows based on a condition.                                |
+| 4 | `ORDER BY`           | List customers sorted by `customer_zip_code_prefix`. | Use when you want sorted output based on a column.                           |
+| 5 | `LIMIT` / `TOP`      | Show top 5 customer records.                         | Use when you want only a few rows from a large dataset.                      |
+| 6 | `GROUP BY` + `COUNT` | Count the number of customers from each state.       | Use to group rows and count how many are in each group/category.             |
+| 7 | `GROUP BY` + `COUNT` | Count how many customers are in each unique city.    | Same as above, but for city-level grouping.                                  |
+| 8 | `WHERE` + `ORDER BY` | Find SP customers, ordered by city name.             | Use `WHERE` for filtering and `ORDER BY` for sorting at the same time.       |
+| 9 | `SELECT` + `ALIAS`   | Show customer state as "Region" and city as "Town".  | Use `AS` to rename columns for readability in reports.                       |
+
+
+
+🟨 Intermediate SQL Tools & Query Types
+
+| # | **Tool**             | **Question**                                       | **When to Use**                                                               |
+| - | -------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------- |
+| 1 | `JOIN`               | Join orders and customers to show order locations. | When you want to combine data from **multiple tables** (row-level merge).     |
+| 2 | `GROUP BY + HAVING`  | Cities with more than 100 customers.               | When you need to **group rows** and filter based on aggregated results.       |
+| 3 | `CASE WHEN`          | Classify payments as full or installments.         | When you need to **create new columns** based on **conditions**.              |
+| 4 | `DATEPART`, `FORMAT` | Number of orders per month in 2018.                | When you need to **extract or format date parts** from a date column.         |
+| 5 | `AVG`, `SUM`         | Average revenue per product.                       | When performing **numeric calculations** over grouped rows.                   |
+| 6 | Subqueries (inline)  | Customers who placed more than 3 orders.           | When you need **filtering using another query**, often used in WHERE or FROM. |
+
+
+
+
+
+🟥 Advanced SQL Tools & Query Types:
+
+| # | **Tool**                                                  | **Question**                                                       | **When to Use**                                                          |
+| - | --------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| 1 | WINDOW FUNCTIONS (`ROW_NUMBER()`, `RANK()`, `AVG() OVER`) | Rank sellers by revenue, calculate moving average of sales         | When doing row-by-row comparisons or rankings within partitions of data  |
+| 2 | CTEs (`WITH` clause)                                      | Calculate year-over-year revenue growth with clarity               | When breaking down complex queries into readable, modular steps          |
+| 3 | `LAG()` / `LEAD()`                                        | Compare customer’s current vs. last order                          | When comparing values from previous or next rows                         |
+| 4 | `DATEDIFF()` + `MIN()`                                    | Find customers who ordered again within 6 months of first purchase | When analyzing time gaps between first and subsequent activities         |
+| 5 | `UNION`, `EXCEPT`, `INTERSECT`                            | Identify repeat customers across years                             | When combining, filtering, or intersecting results from multiple queries |
+| 6 | Recursive CTEs                                            | Customer referral chain (if applicable)                            | When dealing with hierarchical or recursive data relationships           |
+
